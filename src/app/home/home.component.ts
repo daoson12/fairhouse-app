@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  city='';
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  searchHousing(){
+    console.log(this.city);
+    
+  }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '../location';
 
 @Component({
   selector: 'app-home',
@@ -7,18 +8,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  city='';
-  searchResults = [];
-  housingList = [];
+  city = '';
+  searchResults: Location[] = [];
+  housingList: Location[] = [
+    {
+      id: 1,
+      name: 'Location One',
+      description: 'Safe Place',
+      city: 'Chicago'
+    },
+    {
+      id: 2,
+      name: 'Location Two',
+      description: 'Safe Place',
+      city: 'Chicago'
+    },
+    {
+      id: 3,
+      name: 'Location Three',
+      description: 'Safe Place',
+      city: 'Chicago'
+    }
+  ];
 
-  
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  searchHousing(){
+  searchHousing() {
     console.log(this.city);
-    
+
   }
 }

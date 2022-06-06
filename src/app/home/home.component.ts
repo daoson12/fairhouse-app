@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   city='';
+  searchResults = [];
+  housingList = [];
+
+  
   constructor() { }
 
   ngOnInit(): void {

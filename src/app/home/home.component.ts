@@ -35,16 +35,15 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.searchHousing
   }
 
   searchHousing() {
     if (this.city !== ''){
-      this.searchResults= this.housingList.filter(location=>
-        location.city.toLowerCase()
-        === this.city.toUpperCase());        
-        
+      this.searchResults = this.housingList
+      .filter(location =>
+        location.city.toLowerCase() === 
+        this.city.toLowerCase()); 
     }
-  
-
   }
 }
